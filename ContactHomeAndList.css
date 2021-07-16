@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #ddd;
+}
+
+.container {
+    max-width: 420px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #313438;
+}
+
+.header {
+    display: flex;
+    background: linear-gradient(90deg, rgba(30,152,210,1) 6%, rgba(205,169,36,0.9110994739692753) 100%);
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0em;
+}
+
+.search-contact {
+    font-size: 1.1em;
+    padding: 0.3em;
+    border-radius: 100px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #F5F5F5;
+}
+
+.add-contact {
+    font-size: 1.2em;
+    color: #F5F5F5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.display-text {
+    padding-left: .5em;
+    color: #F5F5F5;
+    font-size: 0.7em;
+}
+
+.contact-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1.5em;
+    margin: 0.8em 0em;
+}
+
+.email-address {
+    background: #0A90A1;
+    font-size: 0.8em;
+    margin-top: 1.5em;
+    padding: 0.4em 0.5em;
+    border-radius: 100px;
+    border-top-left-radius: 0px;
+}
+
+.view-userprofile {
+    color: #F5F5F5;
+    font-size: 1.2em;
+}
+
+.delete-userprofile {
+    margin-left: 1em;
+    color: #F5F5F5;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+hr {
+    border: 2px solid #494a4b;
+}
