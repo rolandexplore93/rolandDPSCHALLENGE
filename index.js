@@ -37,6 +37,6 @@ function deleteList(parameter, fname, sname){
         location.reload();
         
     }else{
-        // alert(fullname + ' not deleted');
+        
     }
 }
