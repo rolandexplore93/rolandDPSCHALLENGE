@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #ddd;
+}
+
+.container {
+    max-width: 420px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #313438;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(30,152,210,1) 6%, rgba(205,169,36,0.9110994739692753) 100%);
+    padding: 2em 0em 0.6em 0em;
+
+}
+
+.cancel-user-registeration {
+    position: relative;
+    top: -2.6em;
+    color: #F5F5F5;
+    font-size: 1.2em;
+}
+
+.header-inscription {
+    text-align: center;
+}
+
+.reg-message {
+    padding: 0.6em 0em;
+}
+
+.reg-guide {
+    font-size: 0.5em;
+    background:#499da8;
+    padding: 0.4em 0em;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.save {
+    position: relative;
+    top: -2.6em;
+    color: #F5F5F5;
+    font-size: 1.1em;
+    padding: 0.1em 0.4em;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #b6a465, #ebc230);
+    box-shadow:  20px 20px 60px #ae901f,
+                -20px -20px 60px #ecc229;
+    cursor: pointer;
+}
+
+.contact-info {
+    padding: 3em 1.5em;
+}
+
+.info-details {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 2em;
+    padding: .5em 2em;
+    border-radius: 20px;
+    box-shadow: inset 20px 20px 60px #2a2c30,
+                inset -20px -20px 60px #383c40;
+}
+
+.icon-gradient {
+    background: linear-gradient(90deg, rgba(30,152,210,1) 6%, rgba(205,169,36,0.9110994739692753) 100%);
+    border-radius: 100px;
+    padding: .5em;
+}
+
+.type {
+    border: none;
+    background: none;
+    padding-left: 2em;
+    font-size: 1.2em;
+    color: #F5F5F5;
+    outline: none;  
+}
