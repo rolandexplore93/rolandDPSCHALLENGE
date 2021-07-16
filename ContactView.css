@@ -1,0 +1,71 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #fff;
+    
+}
+
+.container {
+    max-width: 428px;
+    margin: 0 auto;
+    background-color: #313438;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(90deg, rgba(30,152,210,1) 6%, rgba(205,169,36,0.9110994739692753) 100%);
+    padding: 0.625em 0.625em;
+}
+
+
+.backbutton {
+    font-size: 1.2em;
+    padding: 0;
+    position: relative;
+}
+
+.userFullName {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+
+i {
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-info {
+    padding: 3em 1.5em;
+}
+
+.info-line {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1em 2em;
+    margin-top: 2em;
+    border-radius: 20px;
+    box-shadow:  6px 6px 12px #2d2f33,
+                -6px -6px 12px #35393d;
+}
+
+p {
+    margin: 0;
+    padding-left: 2em;
+}
+
+.icon-gradient {
+    background: linear-gradient(90deg, rgba(30,152,210,1) 6%, rgba(205,169,36,0.9110994739692753) 100%);
+    border-radius: 100px;
+    padding: .5em;
+}
