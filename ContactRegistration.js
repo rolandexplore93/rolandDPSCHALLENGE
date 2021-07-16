@@ -16,9 +16,9 @@ document.getElementById('saveit').addEventListener('click', ()=>{
 			let phone = document.getElementById('phone').value;
 			let job = document.getElementById('job').value;
 
-
+            
             //validation codes for email address and phone number in Nigeria format
-        var err = ' ';
+        var err = '';
         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         var validPhone = /^[0]\d{10}$/;
 
