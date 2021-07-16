@@ -29,8 +29,8 @@ document.getElementById('saveit').addEventListener('click', ()=>{
             //validation added to firstname, lastname, email and phone number not to accept contact information from users if they didn't fill the required fields
         if(fname.length < 2){err += '<li>Invalid firstname detected</li>';}
         if(lname.length < 2){err += '<li>Invalid lastname detected</li>';}
-        if (!email.match(validRegex)){err += '<li>Invalid email detected</li>';}
-        if (!phone.match(validPhone)){err += '<li>Invalid phone number detected</li>';}
+        if (!email.match(validRegex)){err += '<li>Invalid email format detected</li>';}
+        if (!phone.match(validPhone)){err += '<li>Invalid phone number detected... Accepted format is the Nigeria format (e.g 07037376611) </li>';}
             
         if(err == ''){
             var listKey = getKeys(6);
