@@ -38,6 +38,12 @@ showlist = document.getElementById('showlist').innerHTML +=
     + email + '</p> </div>     <div class="contact-extra"> <a href="#!" onclick="redirectFunc('+keyid+')"> <i class="fas fa-user-circle view-userprofile"></i></a> <i class="fas fa-window-close delete-userprofile" onclick="return deleteList('+keyid+', \''+ fname + '\', \''+ lname + '\')"></i></div>  </div>  <hr>';
 }
 
+//When clicked on userview icon, it redirects to the view user profile page
+function redirectFunc(id){
+    console.log(id)
+    window.location = './ContactView.html?redirectid=' + id;
+}
+
 function deleteList(parameter, fname, sname){
     let str = parameter;
     let isconfirm = confirm('Are you sure you want to remove ' +fname+ ' '+sname+' contact?');
