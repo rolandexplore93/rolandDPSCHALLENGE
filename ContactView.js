@@ -12,4 +12,18 @@ function findGetParameter(parameterName) {
     //redirect id from the url
     // NOTE: Each user profile has its key identity
 var redirectid = findGetParameter('redirectid');
-    //contact list from localstorage
+
+
+    //Retrieve contact list from localstorage
+var retrievedProfileList = JSON.parse(localStorage.getItem("contactlist"));
+    //find the particular contact to show using the redirect id
+    //const index = retrievedProfileList.findIndex((user)=> {return user != redirectid});
+
+var validlist = '';
+for (var i=0; i < retrievedProfileList.length; i++) {
+        //console.log(redirectid)
+    if (retrievedProfileList[i].key == redirectid) {
+        //console.log('yes')
+        validlist =  retrievedProfileList[i];
+        }
+    }
