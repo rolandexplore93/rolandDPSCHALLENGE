@@ -16,7 +16,21 @@ document.getElementById('saveit').addEventListener('click', ()=>{
 			let phone = document.getElementById('phone').value;
 			let job = document.getElementById('job').value;
 
+            
+            //validation codes for email address and phone number in Nigeria format
+        var err = '';
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var validPhone = /^[0]\d{10}$/;
+
+        if(fname == '' || lname == '' || email == '' || phone == '' || job == ''){
+            err += '<li>All field must be specified</li>';
+        }
         
+            //validation added to firstname, lastname, email and phone number not to accept contact information from users if they didn't fill the required fields
+        if(fname.length < 2){err += '<li>Invalid firstname detected</li>';}
+        if(lname.length < 2){err += '<li>Invalid lastname detected</li>';}
+        if (!email.match(validRegex)){err += '<li>Invalid email detected</li>';}
+        if (!phone.match(validPhone)){err += '<li>Invalid phone number detected</li>';}
             
         if(err == ''){
             var listKey = getKeys(6);
