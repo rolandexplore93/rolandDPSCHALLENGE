@@ -22,3 +22,21 @@ showlist = document.getElementById('showlist').innerHTML +=
     + fullname + '</p> <p class="email-address">' 
     + email + '</p> </div>     <div class="contact-extra"> <a href="#!" onclick="redirectFunc('+keyid+')"> <i class="fas fa-user-circle view-userprofile"></i></a> <i class="fas fa-window-close delete-userprofile" onclick="return deleteList('+keyid+', \''+ fname + '\', \''+ lname + '\')"></i></div>  </div>  <hr>';
 }
+
+function deleteList(parameter, fname, sname){
+    let str = parameter;
+    let isconfirm = confirm('Are you sure you want to remove ' +fname+ ' '+sname+' contact?');
+    if(isconfirm == true){
+        var fetchList = JSON.parse(localStorage.getItem("contactlist"));
+
+        const index = fetchList.findIndex((user)=> {return user == parameter});
+        fetchList.splice(index, 1);
+        //Save the getLocalStorage back to local storage
+        localStorage.setItem('contactlist', JSON.stringify(fetchList));
+        
+        location.reload();
+        
+    }else{
+        // alert(fullname + ' not deleted');
+    }
+}
