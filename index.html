@@ -12,7 +12,38 @@
     <title>Homepage - Contact List</title>
 </head>
 <body>
-    <h1>Start</h1>
+    <div class="container">
+        <header class="header">
+            <form class="search">
+                <input class="search-contact" id="search-keyword" type="text" name="search-contact" placeholder="Search contact">
+            </form>
+            <a href="./ContactRegistration.html">
+                <i class="fas fa-plus-circle add-contact"></i>
+            </a>
+        </header>
+
+        <section class="contact-storage">
+            <!-- Creation of the demo contact listing set up that we will invoke Javascript functions on later-->
+            <div class="contact-profile">
+                <div class="contact-details">
+                    <p class="name">Orobola Roland O.</p>
+                    <p class="email-address">Software Engineer</p>
+                </div>
+                <div class="contact-extra">
+                    <a href="#">
+                        <i class="fas fa-user-circle view-userprofile"></i>                    
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-window-close delete-userprofile"></i>
+                        <button id="deleteList"><i class="fas fa-window-close delete-userprofile"></i></button>		
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
     
 </body>
 </html>
