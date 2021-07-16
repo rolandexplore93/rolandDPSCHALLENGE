@@ -27,3 +27,15 @@ for (var i=0; i < retrievedProfileList.length; i++) {
         validlist =  retrievedProfileList[i];
         }
     }
+
+
+var personfirstname = validlist.firstname;
+var personlastname = validlist.lastname;
+var personphone = validlist.phoneno;
+var personemail = validlist.mail;
+var personjob = validlist.work;
+var fullname = personfirstname+' '+personlastname;
+showFullName = document.getElementById('showFullName').innerHTML += '<div class="userFullName"> ' + fullname + '</div>'
+showProfile = document.getElementById('showProfile').innerHTML += '<div class="info-line"> <i class="fas fa-envelope icon-gradient"></i> <p class="email"> ' + personemail + '</p></div>  <div class="info-line"> <i class="fas fa-phone icon-gradient"></i> <p class="phone-number"> ' + personphone + ' </p> </div> <div class="info-line"><i id="occupation" class="fas fa-briefcase icon-gradient"></i> <p class="job"> ' + personjob + '</p>  </div>'
+    
+
