@@ -1,5 +1,20 @@
-//Contacts retrieved from the local storage and stored on the contact list page (our index page)
+//Contacts can be searched using the search input on INDEX HOME
+function searchByKeyword(){
+        let input = document.getElementById('search-keyword').value;
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('contact-profile');
 
+        for (i = 0; i < x.length; i++){
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display=""; 
+        }
+    }
+}
+
+//Contacts retrieved from the local storage and stored on the contact list page (our index page)
 
 var retrievedList = JSON.parse(localStorage.getItem("contactlist"));
 			// console.log(retrievedList)
