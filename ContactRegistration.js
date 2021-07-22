@@ -20,7 +20,10 @@ document.getElementById('saveit').addEventListener('click', ()=>{
             //validation codes for email address and phone number in Nigeria format
         var err = '';
         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        var validPhone = /^[0]\d{10}$/;
+        // var validPhone = /^[0]\d{10}$/;
+        //New validation added for phonenumber to accept phone number from all countries including
+        //area code (e.g, +1....., +234.....)
+        const validPhone = /^[+]\d{1,3}\d{4,13}$/;  //new phone no validation written by me
 
         if(fname == '' || lname == '' || email == '' || phone == '' || job == ''){
             err += '<li>All field must be specified</li>';
@@ -30,7 +33,7 @@ document.getElementById('saveit').addEventListener('click', ()=>{
         if(fname.length < 2){err += '<li>Invalid firstname detected</li>';}
         if(lname.length < 2){err += '<li>Invalid lastname detected</li>';}
         if (!email.match(validRegex)){err += '<li>Invalid email format detected</li>';}
-        if (!phone.match(validPhone)){err += '<li>Invalid phone number detected... Accepted format is the Nigeria format (e.g 07037376611) </li>';}
+        if (!phone.match(validPhone)){err += '<li>Invalid phone number detected... Add your phone number in international format e.g +1; +234; +44...</li>';}
             
         if(err == ''){
             var listKey = getKeys(6);
