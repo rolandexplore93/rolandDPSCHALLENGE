@@ -23,7 +23,7 @@ document.getElementById('saveit').addEventListener('click', ()=>{
         // var validPhone = /^[0]\d{10}$/;
         //New validation added for phonenumber to accept phone number from all countries including
         //area code (e.g, +1....., +234.....)
-        const validPhone = /^[+]\d{1,3}\d{4,13}$/;  //new phone no validation written by me
+        const validPhone = /^[+]\d{1,3}\d{4,13}$/;
 
         if(fname == '' || lname == '' || email == '' || phone == '' || job == ''){
             err += '<li>All field must be specified</li>';
