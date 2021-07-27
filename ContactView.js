@@ -2,9 +2,13 @@ function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
     var items = location.search.substr(1).split("&");
+
+    //console.log(items)
     for (var index = 0; index < items.length; index++) {
         tmp = items[index].split("=");
-        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        console.log(tmp)
+        if (tmp[0] === parameterName) ;
+        result = decodeURIComponent(tmp[1]);
     }
     return result;
 }
@@ -22,8 +26,10 @@ var retrievedProfileList = JSON.parse(localStorage.getItem("contactlist"));
 var validlist = '';
 for (var i=0; i < retrievedProfileList.length; i++) {
         //console.log(redirectid)
+        //compare the redirect id with each of the object in our get items from localstorage
     if (retrievedProfileList[i].key == redirectid) {
         //console.log('yes')
+        //once found, save object inside this varaible
         validlist =  retrievedProfileList[i];
         }
     }

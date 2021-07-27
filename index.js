@@ -50,7 +50,8 @@ function deleteList(parameter, fname, sname){
     if(isconfirm == true){
         var fetchList = JSON.parse(localStorage.getItem("contactlist"));
 
-        const index = fetchList.findIndex((user)=> {return user == parameter});
+        const index = fetchList.findIndex((user)=> {return user.key == parameter});
+        console.log(index)
         fetchList.splice(index, 1);
         //Save the getLocalStorage back to local storage
         localStorage.setItem('contactlist', JSON.stringify(fetchList));
