@@ -54,6 +54,8 @@ document.getElementById('saveit').addEventListener('click', ()=>{
                 localStorage.setItem('contactlist', JSON.stringify(contactArray));
                 
                 document.getElementById('showerr').innerHTML = '<div>Your Information has been saved successfully. Redirecting...</div>';
+                document.getElementById('showerr').style.color = 'green';
+				document.getElementById('showerr').style.paddingLeft = '50px';
                     //redirect to INDEX HOME page to show lists
                 window.location.href = "index.html";
                 
@@ -66,11 +68,15 @@ document.getElementById('saveit').addEventListener('click', ()=>{
                 localStorage.setItem('contactlist', JSON.stringify(list));
                 
                 document.getElementById('showerr').innerHTML = '<div>Successfully Added. Redirecting</div>';
+                document.getElementById('showerr').style.color = 'green';
+				document.getElementById('showerr').style.paddingLeft = '50px';
                     //redirect to INDEX HOME page to show lists
                 window.location.href = "index.html";
             }				
         }else{
             document.getElementById('showerr').innerHTML = '<ul>Error occured <br>'+err+'</ul>';
+            document.getElementById('showerr').style.color = 'red';
+			document.getElementById('showerr').style.paddingLeft = '50px';
             
         }
 
