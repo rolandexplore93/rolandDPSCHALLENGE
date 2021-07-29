@@ -40,7 +40,6 @@ showlist = document.getElementById('showlist').innerHTML +=
 
 //When clicked on userview icon, it redirects to the view user profile page
 function redirectFunc(id){
-    console.log(id)
     window.location = './ContactView.html?redirectid=' + id;
 }
 
