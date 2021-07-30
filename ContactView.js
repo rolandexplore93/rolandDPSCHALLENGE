@@ -3,7 +3,7 @@ function findGetParameter(parameterName) {
         tmp = [];
     var items = location.search.substr(1).split("&");
 
-    //console.log(items)
+    console.log(items)
     for (var index = 0; index < items.length; index++) {
         tmp = items[index].split("=");
         console.log(tmp)
@@ -16,12 +16,14 @@ function findGetParameter(parameterName) {
     //redirect id from the url
     // NOTE: Each user profile has its key identity
 var redirectid = findGetParameter('redirectid');
+console.log(redirectid)
 
 
     //Retrieve contact list from localstorage
 var retrievedProfileList = JSON.parse(localStorage.getItem("contactlist"));
     //find the particular contact to show using the redirect id
     //const index = retrievedProfileList.findIndex((user)=> {return user != redirectid});
+console.log(retrievedProfileList)
 
 var validlist = '';
 for (var i=0; i < retrievedProfileList.length; i++) {
@@ -31,6 +33,8 @@ for (var i=0; i < retrievedProfileList.length; i++) {
         //console.log('yes')
         //once found, save object inside this varaible
         validlist =  retrievedProfileList[i];
+        console.log(validlist)
+
         }
     }
 
